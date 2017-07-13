@@ -5,14 +5,17 @@ import sbtassembly.AssemblyKeys._
 import sbtassembly.{PathList, MergeStrategy}
 
 /************************************************************
- * 说明:
- * 1. 编译管理
+ * 编译定义类:
+ * 1).使用scalal的编译版本
+ * 2).资源库
+ * 3).去重策略
  ************************************************************/
 object Common {
 
   val APP_VERSION = "0.0.1"
   val SCALA_VERSION = "2.11.5"
-  val ORGANIZATION = "com.ibm.topscore"
+  val ORGANIZATION = "com.ibm.data.mining.bigdata"
+  val JAR_NAME = "spark-job.jar"
 
   val settings: Seq[Def.Setting[_]] = Seq(
 

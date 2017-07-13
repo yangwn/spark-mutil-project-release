@@ -3,11 +3,13 @@ import Keys._
 
 
 /*********************************************************************************************
- * Dependency lib Manager
+ * Jar包管理: 
+ *  1).jar的依赖与依赖关系
+ *  2).打包策略
  *
  * Notice:
- * %% --> find jar for specified scala version.
- * %  --> don't need specified scala version. For example, the lib compile with Java.
+ *  %% --> find jar for specified scala version.
+ *  %  --> don't need specified scala version. For example, the lib compile with Java.
  *********************************************************************************************/
 object Dependencies {
 
@@ -36,7 +38,7 @@ object Dependencies {
     "com.sksamuel.elastic4s" %% "elastic4s-testkit" % "1.7.0" % "test"
   )
   
-  //Spark 
+  //Spark
   val sparkVersion = "2.1.1"
   val sparkDependencies  : Seq[ModuleID] = commonDependencies ++ Seq(
     "org.apache.spark" %% "spark-core" % sparkVersion % "provided",

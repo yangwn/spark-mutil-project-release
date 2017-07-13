@@ -1,10 +1,10 @@
 name := MyBuild.NamePrefix + "root"
 
-version := "0.0.1"
+version := Common.APP_VERSION
 
-scalaVersion := "2.11.5"
+scalaVersion := Common.SCALA_VERSION
 
-resolvers += "scalaz-bintray" at "http://dl.bintray.com/scalaz/releases"
+organization := Common.ORGANIZATION
 
 lazy val common = project.
     settings(Common.settings: _*)
@@ -28,5 +28,5 @@ lazy val search = project.
     settings(Common.settings: _*).
     settings(libraryDependencies ++= Dependencies.searchDependencies)
 
-lazy val root = (project in file(".")).
-    aggregate(core, common, utils, search, spark)
+// lazy val root = (project in file(".")).
+//     aggregate(core, common, utils, search, spark)
