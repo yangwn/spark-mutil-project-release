@@ -15,7 +15,6 @@ object Common {
   val APP_VERSION = "0.0.1"
   val SCALA_VERSION = "2.11.5"
   val ORGANIZATION = "com.ibm.data.mining.bigdata"
-  val JAR_NAME = "spark-job.jar"
 
   val settings: Seq[Def.Setting[_]] = Seq(
 
@@ -54,7 +53,6 @@ object Common {
       "Apache Staging" at "https://repository.apache.org/content/repositories/staging/",
       Classpaths.typesafeReleases,
       "Typesafe repository" at "http://repo.typesafe.com/typesafe/releases/",
-      "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots",
       "Java.net Maven2 Repository" at "http://download.java.net/maven/2/",
       Classpaths.sbtPluginReleases,
       "Eclipse repositories" at "https://repo.eclipse.org/service/local/repositories/egit-releases/content/"

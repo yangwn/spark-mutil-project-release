@@ -16,7 +16,8 @@ object Dependencies {
   //Common
   val commonDependencies: Seq[ModuleID] = Seq(
     "org.scalaz" %% "scalaz-core" % "7.2.14",
-    "org.scalatest" %% "scalatest" % "2.2.4" % "test"
+    "org.scalatest" %% "scalatest" % "2.2.4" % "test",
+    "junit" % "junit" % "4.12" % "test"
   )
   
   //Json
@@ -40,11 +41,13 @@ object Dependencies {
   
   //Spark
   val sparkVersion = "2.1.1"
+  
   val sparkDependencies  : Seq[ModuleID] = commonDependencies ++ Seq(
     "org.apache.spark" %% "spark-core" % sparkVersion % "provided",
     "org.apache.spark" %% "spark-sql" % sparkVersion % "provided",
     "org.apache.spark" %% "spark-mllib" % sparkVersion % "provided",
     "org.apache.spark" %% "spark-streaming" % sparkVersion % "provided"
+
   )
 
 }
